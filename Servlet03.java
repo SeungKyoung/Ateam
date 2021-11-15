@@ -44,9 +44,13 @@ public class Servlet03 extends HttpServlet {
 		if(succ > 0) {
 			out.println("<script>alert('회원가입 성공!!!');</script>");
 			out.println("<a href='memberMain.html'>회원가입 화면으로 이동</a>");
+			out.println("<br/><br/>");
+			out.println("<a href='s04.do'>전체회원 목록보기</a>");
 		}else {
 			out.println("<script>alert('회원가입 실패!!!');</script>");
 			out.println("<a href='memberMain.html'>회원가입 화면으로 이동</a>");
+			out.println("<br/><br/>");
+			out.println("<a href='s04.do'>전체회원 목록보기</a>");
 		}
 	}
 
