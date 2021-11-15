@@ -2,19 +2,18 @@ package com.hanul.study;
 
 import java.io.Serializable;
 
-public class MemberDTO implements Serializable { //직렬화
-	//① 멤버변수(필드) 선언
+public class MemberDTO implements Serializable{ //직렬화
+	//1.멤버변수(필드) 선언
 	private String name;
 	private String id;
 	private String pw;
-	private int age;
+	private int age ;
 	private String addr;
 	private String tel;
 	
-	//② 디폴트 생성자 메소드(빈깡통)
+	//2. 디폴트 생성자 메소드(빈깡통)
 	public MemberDTO() {}
 
-	//③ 생성자 메소드 초기화
 	public MemberDTO(String name, String id, String pw, int age, String addr, String tel) {
 		super();
 		this.name = name;
@@ -24,7 +23,8 @@ public class MemberDTO implements Serializable { //직렬화
 		this.addr = addr;
 		this.tel = tel;
 	}
-	//④ Getters & Setters 메소드
+	
+	//4. getter & setter 메소드
 	public String getName() {
 		return name;
 	}
@@ -74,4 +74,6 @@ public class MemberDTO implements Serializable { //직렬화
 	}
 	
 	
+	
+
 }
