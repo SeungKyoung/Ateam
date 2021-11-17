@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/s01.do")
 public class Servlet01 extends HttpServlet {
-	protected void service(HttpServletRequest request, HttpServletResponse response) 
+	protected void service(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException {
 		//① 클라이언트의 요청을 받는다 : HttpServletRequest
 		//폼에서 입력한 매개변수 값을 가져온다 : getParameter();
-		request.setCharacterEncoding("utf-8"); //인코딩 설정
-		int num1 = Integer.parseInt(request.getParameter("num1")); //네이밍을 할 때는
-		int num2 = Integer.parseInt(request.getParameter("num2")); //data base 테이블의 컬럼명과 일치시켜주면 됨
+		request.setCharacterEncoding("utf-8");	//인코딩 설정
+		int num1 = Integer.parseInt(request.getParameter("num1"));
+		int num2 = Integer.parseInt(request.getParameter("num2"));
 		
 		//② 비지니스 로직 : num1 ~ num2 누적합 계산 ▶ Model(별도의 클래스에 작성)
 		int sum = 0;
@@ -24,13 +24,20 @@ public class Servlet01 extends HttpServlet {
 		}
 		
 		//③ 프리젠테이션 로직 : 결과를 html 코드로 응답 ▶ HttpServletResponse
-		response.setContentType("text/html; charset=utf-8"); //MIME Type
-		PrintWriter out = response.getWriter(); //출력스트림
+		response.setContentType("text/html; charset=utf-8");	//MIME Type
+		PrintWriter out = response.getWriter();		//출력스트림
 		out.println("<body>");
-		out.println("첫 번째 정수 : "+ num1 + "<br/>'");
-		out.println("두 번째 정수 : "+ num2 + "<br/>'");
+		out.println("첫 번째 정수 : " + num1 + "<br/>");
+		out.println("두 번째 정수 : " + num2 + "<br/>");
 		out.println("두 정수 사이의 누적합 : " + sum);
 		out.println("</body>");
-		
 	}
 }//class
+
+
+
+
+
+
+
+

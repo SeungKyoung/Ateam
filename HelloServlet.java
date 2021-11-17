@@ -15,7 +15,7 @@ public class HelloServlet extends HttpServlet {
 		//② 비지니스 로직 : DB연동하여 결과를 리턴한다 ▶ 별도의 클래스에 작성
 		//③ 프리젠테이션 로직 : 결과를 응답(html, jsp) ▶ HttpServletResponse
 		response.setContentType("text/html; charset=utf-8");	//MIME Type
-		PrintWriter out = response.getWriter();	//출력스트림
+		PrintWriter out = response.getWriter();		//출력스트림
 		out.println("<html>");
 		out.println("<head>");
 		out.println("<title>Response Servlet</title>");
